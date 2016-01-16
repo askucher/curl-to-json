@@ -11,5 +11,5 @@ module.exports = (str)->
      p.zip keys, values
     method: if obj.find(-> it.0 is \--data)? then 'POST' else 'GET'
     url: obj.find(-> it.0 is \curl).1 
-    headers: obj.filter(-> it.0 is \-H).map(-> it.1.split(": ") )
+    headers: obj |> p.filter (.0 is \-H) |> p.map (.1.split(": ") ) |> p.pairs-to-obj
     form-data: obj.find(-> it.0 is \--data)?1?split?(\&)?map?(-> it.split(\=).map(-> urlencode.decode it) ) ? []
