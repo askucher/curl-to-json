@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+convert = require('../curl-to-json.js');
+console.log(process.argv[1]);
+console.log(convert(process.argv[1]));
