@@ -17,6 +17,9 @@
     });
     obj = p.zip(keys, values);
     return {
+      method: obj.find(function(it){
+        return it[0] === '--data';
+      }) != null ? 'POST' : 'GET',
       url: obj.find(function(it){
         return it[0] === 'curl';
       })[1],
