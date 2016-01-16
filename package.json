@@ -1,0 +1,28 @@
+{
+  "name": "curl-to-json",
+  "version": "1.0.0",
+  "description": "Convert generated google chrome curl from request into json",
+  "main": "curl-parser.js",
+  "dependencies": {
+    "prelude-ls": "^1.1.2",
+    "urlencode": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/askucher/curl-to-json.git"
+  },
+  "keywords": [
+    "curl",
+    "json"
+  ],
+  "author": "Andrey Stehno",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/askucher/curl-to-json/issues"
+  },
+  "homepage": "https://github.com/askucher/curl-to-json#readme"
+}
