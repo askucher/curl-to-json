@@ -12,6 +12,14 @@ npm i curl-to-json
 
 Usage
 
+Use with terminal
+
+```Bash
+curl-to-json 'curl ...'
+```
+
+Use with require
+
 
 ```Javascript
 
@@ -30,11 +38,7 @@ curlToJson("curl 'https://www.google.com.ua/?gws_rd=ssl' -H 'accept-encoding: gz
 ```
 
 
-Use with console
 
-```Bash
-curl-to-json 'curl ...'
-```
 
 
 Use with request 
