@@ -1,33 +1,34 @@
 {
-  "name": "curl-to-json",
-  "version": "1.0.17",
-  "uperversion": "1.0",
-  "subversion": 17,
-  "description": "Convert generated google chrome curl from request into json",
-  "main": "curl-parser.js",
+  "devDependencies": {},
   "dependencies": {
+    "form2json": "^0.1.0",
     "prelude-ls": "^1.1.2",
     "urlencode": "^1.1.0"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "main": "curl-parser.js",
+  "description": "Convert generated google chrome curl from request into json",
+  "subversion": 18,
+  "uperversion": "1.0",
+  "version": "1.0.18",
+  "name": "curl-to-json",
+  "homepage": "https://github.com/askucher/curl-to-json#readme",
+  "bugs": {
+    "url": "https://github.com/askucher/curl-to-json/issues"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/askucher/curl-to-json.git"
+  "license": "ISC",
+  "author": "Andrey Stehno",
+  "bin": {
+    "curl-to-json": "./bin/curl-to-json"
   },
   "keywords": [
     "curl",
     "json"
   ],
-  "bin": {
-    "curl-to-json": "./bin/curl-to-json"
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/askucher/curl-to-json.git"
   },
-  "author": "Andrey Stehno",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/askucher/curl-to-json/issues"
-  },
-  "homepage": "https://github.com/askucher/curl-to-json#readme"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
