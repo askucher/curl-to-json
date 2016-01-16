@@ -6,7 +6,7 @@
 
 Install 
 
-```
+```Bash
 npm i curl-to-json
 ```
 
@@ -32,14 +32,14 @@ curlToJson("curl 'https://www.google.com.ua/?gws_rd=ssl' -H 'accept-encoding: gz
 
 Use with console
 
-```
+```Bash
 curl-to-json 'curl ...'
 ```
 
 
 Use with request 
 
-```
+```Javascript
 var request = require('request');
  
 var options = curlToJson("curl ....")
