@@ -20,11 +20,12 @@
       url: obj.find(function(it){
         return it[0] === 'curl';
       })[1],
-      headers: obj.filter(function(it){
+      headers: p.objToPairs(
+      obj.filter(function(it){
         return it[0] === '-H';
       }).map(function(it){
-        return it[1];
-      }),
+        return it[1].split(": ");
+      })),
       formData: (ref$ = (ref1$ = obj.find(function(it){
         return it[0] === '--data';
       })) != null ? (ref2$ = ref1$[1]) != null ? typeof ref2$.split == 'function' ? (ref3$ = ref2$.split('&')) != null ? typeof ref3$.map == 'function' ? ref3$.map(function(it){
