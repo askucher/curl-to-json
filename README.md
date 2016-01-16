@@ -14,7 +14,7 @@ Usage
 
 ```Javascript
 
-curlToJson = require("curlToJson")
+curlToJson = require("curl-to-json")
 
 //open the chrome browser 
 //open the website 
