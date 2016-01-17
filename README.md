@@ -45,6 +45,7 @@ Use with request
 
 ```Javascript
 var request = require('request');
+var curlToJson = require("curl-to-json")
 
 request(
    curlToJson("curl ...."), 
