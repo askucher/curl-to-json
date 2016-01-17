@@ -32,7 +32,7 @@
         return it[0] === '-H';
       })(
       obj))),
-      formData: form2json.decode((ref$ = obj.find(function(it){
+      form: form2json.decode((ref$ = obj.find(function(it){
         return it[0] === '--data';
       })) != null ? ref$[1] : void 8)
     };

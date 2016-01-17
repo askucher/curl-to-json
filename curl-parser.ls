@@ -13,4 +13,4 @@ module.exports = (str)->
     method: if obj.find(-> it.0 is \--data)? then 'POST' else 'GET'
     url: obj.find(-> it.0 is \curl).1 
     headers: obj |> p.filter (.0 is \-H) |> p.map (.1.split(": ") ) |> p.pairs-to-obj
-    form-data: form2json.decode(obj.find(-> it.0 is \--data)?1)
+    form: form2json.decode(obj.find(-> it.0 is \--data)?1)
