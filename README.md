@@ -45,16 +45,15 @@ Use with request
 
 ```Javascript
 var request = require('request');
- 
-var options = curlToJson("curl ....")
- 
-function callback(error, response, body) {
-  if (!error && response.statusCode == 200) {
+
+request(
+   curlToJson("curl ...."), 
+   function (error, response, body) {
+   if (!error && response.statusCode == 200) {
   
-  }
-}
- 
-request(options, callback);
+   }
+});
+
 ```
 
 
