@@ -21,9 +21,7 @@
       method: obj.find(function(it){
         return it[0] === '--data';
       }) != null ? 'POST' : 'GET',
-      gzip: obj.filter(function(it){
-        return it[0] === '--compressed';
-      }).length > 0,
+      gzip: str.indexOf('--compressed') > -1,
       url: obj.find(function(it){
         return it[0] === 'curl';
       })[1],
