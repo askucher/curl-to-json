@@ -11,7 +11,7 @@ module.exports = (str)->
     obj =
      p.zip keys, values
     method: if obj.find(-> it.0 is \--data)? then 'POST' else 'GET'
-    gzip: if obj.filter(-> it.0 is \--compressed).length > 0
+    gzip: obj.filter(-> it.0 is \--compressed).length > 0
     url: obj.find(-> it.0 is \curl).1 
     headers: obj |> p.filter (.0 is \-H) |> p.map (.1.split(": ") ) |> p.pairs-to-obj
     form: form2json.decode(obj.find(-> it.0 is \--data)?1)
