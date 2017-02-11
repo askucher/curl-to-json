@@ -1,29 +1,27 @@
-# Curl to JSON
+# cURL to JSON
 
-###Convert generated google chrome curl into JSON object
+**Convert generated cURL request from Google Chrome into JSON object**
 
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/T2skVvYdsPw/0.jpg)](http://www.youtube.com/watch?v=T2skVvYdsPw)
 
-Install 
+## Use in terminal 
 
 ```Bash
-npm i curl-to-json
-```
-
-Usage
-
-Use with terminal
-
-```Bash
+sudo npm i -g curl-to-json
 curl-to-json 'curl ...'
 ```
 
-Use with require
+## Use in your Node project
 
+```Bash
+npm i -S curl-to-json
+```
 
-```Javascript
+### Print to console
 
-curlToJson = require("curl-to-json")
+```js
+
+var curlToJson = require('curl-to-json');
 
 //open the chrome browser 
 //open the website 
@@ -37,26 +35,18 @@ curlToJson("curl 'https://www.google.com.ua/?gws_rd=ssl' -H 'accept-encoding: gz
 //json printed
 ```
 
+### Use with `request.js` lib
 
-
-
-
-Use with request 
-
-```Javascript
+```js
 var request = require('request');
-var curlToJson = require("curl-to-json")
+var curlToJson = require('curl-to-json')
 
 request(
    curlToJson("curl ...."), 
    function (error, response, body) {
    if (!error && response.statusCode == 200) {
-  
+   // ... on successful response
    }
 });
 
 ```
-
-
-
-
